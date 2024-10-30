@@ -1,0 +1,60 @@
+<!-- 
+eliminar producto
+agregar productos = redirect al catalogo
+boton confimar compra = redirect a COMPRA
+boton de confirmar compra redirect a catalogo -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/static/style_in.css">
+
+</head>
+<body>
+    <div>
+    <header class="header">
+        <nav>
+        <img src="/static/img/logo2.png" alt="logo" class="logo">
+            <ul>
+            <li><a href="/">INICIO</a></li>
+            <li><a href="/catalogo">CATALOGO</a></li>
+            <li><a href="/compra">COMPRA</a></li>
+            <li><a href="/carrito">CARRITO</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+
+    <div class="tabla">
+        <table>
+            <tr>
+                <th>Producto</th>
+                <th>Acciones</th>
+            </tr>
+            <tbody>
+                {% for item in carrito %}
+                <tr>
+                    <td>{{ item }}</td>
+                    <td>
+                        <form action="{{ url_for('remove_product') }}" method="POST">
+                            <input type="hidden" name="product_name" value="{{ item }}">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button>
+            <a href="{{ url_for('catalogo') }}">Agregar producto</a>
+        </button>
+        <button>
+            <a href="{{ url_for('compra') }}">Confirmar compra</a>
+        </button>
+    </div>
+</body>
+</html>
