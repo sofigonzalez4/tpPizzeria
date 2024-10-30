@@ -1,0 +1,169 @@
+<!-- Lista de productos  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/stylecat.css">
+    <link rel="stylesheet" href="/static/style_in.css">
+
+    <title>catalogo</title>
+</head>
+<body>
+    <header class="header">
+ 
+        <nav>
+        <img src="/static/img/logo2.png" alt="logo" class="logo">
+            <ul>
+            <li><a href="/">INICIO</a></li>
+            <li><a href="/catalogo">CATALOGO</a></li>
+            <li><a href="/compra">COMPRA</a></li>
+            <li><a href="/carrito">CARRITO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="encabezado"> 
+        <div class="titulo1">
+            <h1>NUESTRAS PIZZAS</h1>
+        </div>
+    </div>
+    <section class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila">
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/muzzarella.jpg">
+                        <h3> Muzzarella </h3>
+                        <p>Muzzarella, aceitunas y morrón</p>
+                        <p>$5000 </p>
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Muzzarella">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- especial -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/especial.jpg">
+                        <h3> Especial </h3>
+                        <p> Muzzarella, jamón, morrón y aceitunas</p>
+                        <p>$7500 </p>
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Especial">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- capresse -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/capresse.jpg">
+                        <h3> Capresse </h3>
+                        <p> Muzzarella, tomate y albahaca </p>
+                        <p>$6000 </p>
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Capresse">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- fugazzeta -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/fugazza.jpg">
+                        <h3> Fugazzeta </h3>
+                        <p> Muzzarella y cebolla</p>
+                        <p>$6300 </p>
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Fugazzeta">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- Napolitana -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/napolitana.jpg">
+                        <h3> Napolitana </h3>
+                        <p> Muzzarella, tomate, anchoas, orégano, alcaparras y aceitunas</p>
+                        <p>$9500 </p>
+                        
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Napolitana">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- Cuatro Quesos -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/cuatroQ.jpg">
+                        <h3> Cuatro Quesos </h3>
+                        <p> Muzzarella, roquefort, cremoso, parmesano </p>
+                        <p>$8500 </p>
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="cuatroquesos">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- Champiñones -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/champiñon.jpg">
+                        <h3> Champiñones </h3>
+                        <p> Muzzarella, champiñones, aceituna negra, aceituna verde, salame </p>
+                        <p>$8000 </p>
+                        
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Campiñones">
+                        <button type="submit"> AgiGREGAR AL CARRITO </button>
+                    </form>
+                </div>
+
+                <!-- roquefort -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/roquefort.jpg">
+                        <h3> Roquefort </h3>
+                        <p> Muzzarella y roquefort</p>
+                        <p>$7700 </p>
+                        
+                    </div>
+                    <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Roquefort">
+                        <button type="submit"> AGREGAR AL CARRITO </button>      
+                    </form>
+                </div>
+
+                <!-- ANANA -->
+                <div class="pizzas">
+                    <div class="imagen">
+                        <img src="/static/imagenesPizzeria/anana.jpg">
+                        <h3> Ananá </h3>
+                        <p> Muzzarella, ananá, jamón y azúcar morena </p>
+                        <p>$9300 </p>
+                        
+                </div>
+                <form action="{{ url_for('add_product') }}" method="POST">
+                        <input type="hidden" name="product_name" value="Anana">
+                        <button type="submit"> AGREGAR AL CARRITO </button>
+                </form>    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
